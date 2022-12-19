@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-family: sans-serif;
+    color:#2E2E2E;
+}
+
+.container{ 
+    width: 100%;
+    max-width: 1483px;
+    border:solid #DE3039 50px;
+}
+
+h4{
+    letter-spacing: 6px;
+    color:#e5e0e0;
+    align-content: center;
+}
+
+
+nav{
+    display:flex;
+    justify-content:center;
+}
+
+
+.firstdiv{
+    display:flex;
+    flex:1;
+    padding:20px;
+    border:solid #e5e0e0 1px;
+    align-items: center;
+    justify-content:center;
+}
+
+#legoland{
+    display: block;
+   min-width:329px;
+    text-align: center;
+}
+
+.secondiv{
+    display:flex;
+    flex:2;
+    padding:20px;
+    border:solid #e5e0e0 1px;
+    align-items: center;
+    justify-content:center;
+}
+.main{
+    display:flex;
+}
+
+.leftbar{
+    width:215px;
+    border:solid #e5e0e0 1px;
+    padding:45px;
+    padding-left: 110px;
+    
+}
+
+.rightcatalog{
+    flex:5;
+}
+.pricewrapper{
+    display:flex;
+    justify-content: space-between;
+    margin:20px 0;
+    padding-bottom: 20px;
+    border-bottom: solid #e5e0e0 1px;
+    flex-wrap: wrap;
+}
+
+.price{
+    background-color: #e5e0e0;
+    padding:15px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+
+.c:checked{
+    accent-color: red;
+}
+.checkb{
+    color:#c4bcbc;
+    font-size: 0.8em;
+    line-height:2.5em ;
+}
+
+.pricewrapper input{
+    margin:20px;
+}
+.c:checked + .checkb{
+    color:#2E2E2E
+}
+.dropb{
+    font-size: 0.8em;
+}
+
+.theme, .age, .band, .character, .stock{
+    border-bottom: solid #e5e0e0 1px; 
+    padding:20px;
+}
+
+button{
+    padding:15px 45px;
+    background-color: #DE3039;
+    border-color: #DE3039;
+    border-radius: 5px;
+    color:white;
+    font-weight: bolder;
+}
+.rightcatalog{
+    padding:50px;
+}
+.rightcatalog h1{
+    font-size: 2.7em;
+}
+
+.search{
+    padding:30px 0;
+    display:flex;
+    justify-content: space-around;
+}
+.search input{
+    margin-right: 70px;
+    flex:2;
+    padding:15px;
+    border-radius: 5px;
+    border:solid #c4bcbc 1px;
+}
+.popular{
+    flex:1;
+}
+.cars{
+    display:flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.car{
+    width: 300px;
+    margin-bottom: 50px;
+}
+.details{
+    padding:20px;
+    border:solid #e5e0e0 1px;
+    line-height: 1.7;
+    display:flex;
+}
+
+.buy{
+    align-self: flex-end;
+}
+
+
+.pic{
+    border:solid #e5e0e0 1px;
+    text-align: center;
+}
+
+.car h2, h3{
+    color:#c4bcbc;
+    font-size:0.9em;
+}
+
+.car h5{
+    font-size: 1.5em;
+}
+
+.footer{
+    position:fixed;
+    bottom:0;
+    left: 420px;
+    display:flex;
+    height:50px;
+    width:1200px;
+    background-color: white;
+    justify-content: space-between;
+    
+}
+
+.footer div{
+    border: solid #e5e0e0 1px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.one{
+    flex:1;
+}
+.two{
+    flex:2;
+}
+
+
+
+
