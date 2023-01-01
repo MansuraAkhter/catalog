@@ -1,0 +1,143 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+html{
+  font-family: sans-serif;
+  color:#2E2E2E;
+}
+
+.App{ 
+  width: 100%;
+  max-width: 1483px;
+  border:solid #DE3039 50px;
+}
+
+h4{
+ 
+  letter-spacing: 6px;
+  color:#e5e0e0;
+  align-content: center;
+}
+
+
+nav{
+  display:flex;
+  justify-content:center;
+}
+
+
+.firstdiv{
+
+  display:flex;
+  flex:1;
+  padding:20px;
+  border:solid #e5e0e0 1px;
+  align-items: center;
+  justify-content:center;
+}
+
+#legoland{
+ 
+  display: block;
+ min-width:329px;
+  text-align: center;
+}
+
+.secondiv{
+  display:flex;
+  flex:2;
+  padding:20px;
+  border:solid #e5e0e0 1px;
+  align-items: center;
+  justify-content:center;
+}
+
+a{
+  text-decoration: none;
+  color:#2E2E2E;
+}
+
+.pricewrapper{
+  display:flex;
+  justify-content: space-between;
+  margin:20px 0;
+  padding-bottom: 20px;
+  border-bottom: solid #e5e0e0 1px;
+  flex-wrap: wrap;
+}
+
+.price{
+  background-color: #e5e0e0;
+  padding:15px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}
+
+.c:checked{
+  accent-color: red;
+}
+.checkb{
+  color:#c4bcbc;
+  font-size: 0.8em;
+  line-height:2.5em ;
+}
+
+.c:checked + .checkb{
+  color:#2E2E2E;
+}
+
+.theme, .age{
+  border-bottom: solid #e5e0e0 1px; 
+  padding:20px;
+}
+
+button{
+  padding:15px 45px;
+  background-color: #DE3039;
+  border-color: #DE3039;
+  border-radius: 5px;
+  color:white;
+  font-weight: bolder;
+}
+
+.main{
+  display:flex;
+}
+
+.leftbar{
+  width:215px;
+  border:solid #e5e0e0 1px;
+  padding:45px;
+  padding-left: 110px;
+  
+}
+
+.catalog{
+  flex:5;
+  padding:50px;
+}
+
+.rightcatalog h1{
+  font-size: 2.7em;
+}
+.search{
+  margin-right: 70px;
+  padding:15px;
+  border-radius: 5px;
+  border:solid #c4bcbc 1px;
+}
+
+.catalog-details{
+  padding-top:20px;
+  display:flex;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.inside-details{
+  width: 300px;
+  margin-bottom: 50px;
+}

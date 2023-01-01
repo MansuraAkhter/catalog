@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "code":1056,
+            "title":"Big blue lego jeep collection",
+            "price": 500,
+            "theme": "homes",
+            "image_url": "https://picsum.photos/200",
+            "id":1
+        },
+        {
+            "code":2089,
+            "title": "white racing car collection",
+            "price": 800,
+            "theme": "buildings",
+            "image_url": "https://picsum.photos/200",
+            "id":2
+        },
+        {
+            "code":8886,
+            "title":"Sports motorbike",
+            "price": 300,
+            "theme": "transport",
+            "image_url": "https://picsum.photos/200",
+            "id":3
+        },
+        {
+            "code":1000,
+            "title":"Big blue lego jeep collection",
+            "price": 500,
+            "theme": "homes",
+            "image_url": "https://picsum.photos/200",
+            "id":1
+        },
+        {
+            "code":8889,
+            "title": "white racing car collection",
+            "price": 800,
+            "theme": "buildings",
+            "image_url": "https://picsum.photos/200",
+            "id":2
+        },
+        {
+            "code":999,
+            "title":"Sports motorbike",
+            "price": 300,
+            "theme": "transport",
+            "image_url": "https://picsum.photos/200",
+            "id":3
+        }
+    ]
+}
