@@ -64,7 +64,7 @@ a{
   justify-content: space-between;
   margin:20px 0;
   padding-bottom: 20px;
-  border-bottom: solid #e5e0e0 1px;
+ 
   flex-wrap: wrap;
 }
 
@@ -140,4 +140,10 @@ button{
 .inside-details{
   width: 300px;
   margin-bottom: 50px;
+}
+
+.range-container {
+  display: block;
+  width: 100%;
+  border-bottom: solid #e5e0e0 1px;
 }

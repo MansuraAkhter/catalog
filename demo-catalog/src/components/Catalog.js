@@ -4,14 +4,19 @@ import useFetch from '../useFetch'
 import Cart from './Cart'
 import CartWrapper from './CartWrapper'
 
-const Catalog = ({ checked, setChecked }) => {
-  const { products, isPending, Error } = useFetch(
-    'http://localhost:8000/products',
-  )
-  const [cart, setCart] = useState([])
-  const [search, setSearch] = useState('')
-  const [filteredProducts, setFileteredProducts] = useState(products)
-
+const Catalog = ({
+  checked,
+  setChecked,
+  search,
+  setSearch,
+  products,
+  isPending,
+  Error,
+  filteredProducts,
+  setFilteredProducts,
+  cart,
+  setCart,
+}) => {
   const addToCart = (product) => {
     setCart((currentArray) => {
       let arraycopy = [...currentArray]
@@ -23,18 +28,6 @@ const Catalog = ({ checked, setChecked }) => {
   const handleSearch = (event) => {
     setSearch(event.target.value)
   }
-
-  useEffect(() => {
-    setFileteredProducts(
-      products.filter((product) => {
-        // either return true if the product theme is true in checked
-        return (
-          checked[product.theme] &&
-          product.title.toLowerCase().includes(search.toLowerCase())
-        )
-      }),
-    )
-  }, [checked, search])
 
   return (
     <div className="catalog">
@@ -53,8 +46,6 @@ const Catalog = ({ checked, setChecked }) => {
       {products && (
         <ProductList products={filteredProducts} addToCart={addToCart} />
       )}
-
-      <CartWrapper selected={cart} setSelected={setCart} />
     </div>
   )
 }

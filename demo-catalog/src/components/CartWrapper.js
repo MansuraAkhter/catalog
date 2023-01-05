@@ -1,25 +1,17 @@
-import Cart from "./Cart";
-import useFetch from '../useFetch';
+import Cart from './Cart'
+import useFetch from '../useFetch'
 
-const CartWrapper = ({selected, setSelected}) => {
-    const {products} = useFetch('http://localhost:8000/products')
-    
+const CartWrapper = ({ selected, setSelected }) => {
+  const remove = (selectedProduct) => {
+    setSelected((currentArray) => {
+      return currentArray.filter((arrayValue) => {
+        if (arrayValue.id == selectedProduct.id) return false
+        else return true
+      })
+    })
+  }
 
- 
-    const remove = (selectedProduct) => {
-        setSelected((currentArray) => {
-               return currentArray.filter((arrayValue) => {
-                    if(arrayValue.id == selectedProduct.id) return false;
-                    else return true;
-            })
-        })
-    }
-    
-    return ( 
-        <div>
-             {selected && <Cart selected={selected} remove={remove}/>}
-        </div>
-     );
+  return <div>{selected && <Cart selected={selected} remove={remove} />}</div>
 }
- 
-export default CartWrapper;
+
+export default CartWrapper
