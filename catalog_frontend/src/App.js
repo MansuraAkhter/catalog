@@ -20,16 +20,17 @@ function App() {
   const [maxValue, setMaxValue] = useState(5000)
   const [filteredProducts, setFileteredProducts] = useState(products)
   const [checked, setChecked] = useState({
-    "men's clothing": true,
-    electronics: true,
-    transport: true,
-    buildings: true,
-    homes: true,
+    "men's clothing": false,
+    electronics: false,
+    transport:false,
+    buildings: false,
+    homes: false,
   })
   const [search, setSearch] = useState('')
   const getApiData = async () => {
     const res = await axios.get('https://fakestoreapi.com/products')
     setProducts(res.data)
+    setFileteredProducts(res.data)
   }
   useEffect(() => {
     getApiData()
