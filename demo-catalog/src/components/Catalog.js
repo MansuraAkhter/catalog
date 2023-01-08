@@ -32,8 +32,8 @@ const Catalog = ({
   return (
     <div className="catalog">
       <h1>Catalog</h1>
-      {Error && <div>{Error}</div>}
-      {isPending && <div>Loading...</div>}
+      {/* {Error && <div>{Error}</div>}
+      {isPending && <div>Loading...</div>} */}
 
       <input
         className="search"

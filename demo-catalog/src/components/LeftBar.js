@@ -32,7 +32,7 @@ const LeftBar = ({
         <MultiRangeSlider
           min={0}
           max={9000}
-          minValue={200}
+          minValue={0}
           maxValue={5000}
           onChange={(e) => {
             setMinValue(e.minValue)
@@ -56,24 +56,24 @@ const LeftBar = ({
           className="c"
           type="checkbox"
           name="theme1"
-          value="space"
-          checked={checked['space']}
+          value="men's clothing"
+          checked={checked["men's clothing"]}
           onChange={handleChange}
         />
         <label className="checkb" htmlFor="theme1">
-          Space(44)
+          men's clothing
         </label>
         <br />
         <input
           className="c"
           type="checkbox"
           name="theme2"
-          value="ninja"
-          checked={checked['ninja']}
+          value="electronics"
+          checked={checked['electronics']}
           onChange={handleChange}
         />
         <label className="checkb" htmlFor="theme2">
-          Ninja(44)
+          Electronics
         </label>
         <br />
         <input

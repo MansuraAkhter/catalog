@@ -4,44 +4,49 @@ import Filter from './components/Filter'
 import Catalog from './components/Catalog'
 import LeftBar from './components/LeftBar'
 import { useState, useEffect } from 'react'
-import useFetch from './useFetch'
+
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 import WishList from './components/WishList'
 import CartWrapper from './components/CartWrapper'
+import axios from 'axios'
 
 function App() {
   const [cart, setCart] = useState([])
-  const { products, isPending, Error } = useFetch(
-    'http://localhost:8000/products',
-  )
+  const [products, setProducts] = useState([])
+  const [isPending, setIsPending] = useState(true)
+  const [Error, setError] = useState(null)
   const [minValue, setMinValue] = useState(100)
   const [maxValue, setMaxValue] = useState(5000)
   const [filteredProducts, setFileteredProducts] = useState(products)
   const [checked, setChecked] = useState({
-    space: true,
-    ninja: true,
+    "men's clothing": true,
+    electronics: true,
     transport: true,
     buildings: true,
     homes: true,
   })
   const [search, setSearch] = useState('')
-  let random = Math.random()
-  let changeRandom = () => {
-    random = 32
-    console.log(random)
+  const getApiData = async () => {
+    const res = await axios.get('https://fakestoreapi.com/products')
+    setProducts(res.data)
   }
+  useEffect(() => {
+    getApiData()
+  }, [])
+
   useEffect(() => {
     applyFilter()
   }, [search])
 
   const applyFilter = () => {
+    console.log(products)
     setFileteredProducts(
       products.filter((product) => {
         // either return true if the product theme is true in checked
-
+        console.log(product)
         return (
-          checked[product.theme] &&
+          checked[product.category] &&
           product.title.toLowerCase().includes(search.toLowerCase()) &&
           product.price >= minValue &&
           product.price <= maxValue
