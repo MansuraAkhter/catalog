@@ -20,6 +20,11 @@ h4{
   color:#e5e0e0;
   align-content: center;
 }
+h2{
+  letter-spacing:6px;
+  color: dimgrey;
+  text-align:center;
+}
 
 
 nav{
@@ -73,6 +78,11 @@ a{
   padding:15px;
   border-radius: 5px;
   font-size: 0.8em;
+}
+.range-container {
+  display: block;
+  width: 100%;
+  border-bottom: solid #e5e0e0 1px;
 }
 
 .c:checked{
@@ -132,7 +142,6 @@ button{
 .catalog-details{
   padding-top:20px;
   display:flex;
-  display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -142,8 +151,21 @@ button{
   margin-bottom: 50px;
 }
 
-.range-container {
-  display: block;
-  width: 100%;
-  border-bottom: solid #e5e0e0 1px;
+h2, h3{
+  color:#b1b0b0;
+  font-size: 0.85em;
+}
+
+.inside-details h5{
+  font-size: 1.2em;
+}
+
+.cart{
+  padding:30px;
+  display:flex;
+
+}
+
+.cart-details{
+  padding:20px;
 }
