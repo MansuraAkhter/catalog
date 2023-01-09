@@ -80,45 +80,33 @@ const LeftBar = ({
           className="c"
           type="checkbox"
           name="theme3"
-          value="transport"
-          checked={checked['transport']}
+          value="jewelery"
+          checked={checked['jewelery']}
           onChange={handleChange}
         />
         <label className="checkb" htmlFor="theme3">
-          Transport(44)
+        Jewelery
         </label>
         <br />
         <input
           className="c"
           type="checkbox"
           name="theme4"
-          value="buildings"
-          checked={checked['buildings']}
+          value="women's clothing"
+          checked={checked["women's clothing" ]}
           onChange={handleChange}
         />
         <label className="checkb" htmlFor="theme4">
-          Buildings(44)
-        </label>
-        <br />
-        <input
-          className="c"
-          type="checkbox"
-          name="theme5"
-          value="homes"
-          checked={checked['homes']}
-          onChange={handleChange}
-        />
-        <label className="checkb" htmlFor="theme5">
-          Homes(44)
+          Women's clothing
         </label>
         <br />
       </div>
-      <div className="age">
+      {/* <div className="age">
         <h5>
           <b>Age</b>
         </h5>
-        <input className="c" type="checkbox" name="age1" value="Up to a year" />
-
+        <input className="c" type="checkbox" name="age1" value="Up to a year" /> */}
+{/* 
         <label className="checkb" for="age1">
           Up to a year
         </label>
@@ -163,7 +151,7 @@ const LeftBar = ({
           Older than 12 years
         </label>
         <br />
-      </div>
+      </div> */}
       <button onClick={applyFilter}>APPLY FILTER</button>
     </div>
   )

@@ -7,11 +7,12 @@ import { useState, useEffect } from 'react'
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
-import WishList from './components/WishList'
 import CartWrapper from './components/CartWrapper'
+import WishListWrapper from './components/WishListWrapper'
 import axios from 'axios'
 
 function App() {
+  const [wishList, setWishList] = useState([])
   const [cart, setCart] = useState([])
   const [products, setProducts] = useState([])
   const [isPending, setIsPending] = useState(true)
@@ -23,8 +24,8 @@ function App() {
     "men's clothing": false,
     electronics: false,
     transport:false,
-    buildings: false,
-    homes: false,
+    jewelery: false,
+    "women's clothing": false,
   })
   const [search, setSearch] = useState('')
   const getApiData = async () => {
@@ -88,6 +89,8 @@ function App() {
                   setFilteredProducts={setFileteredProducts}
                   cart={cart}
                   setCart={setCart}
+                  wishList={wishList}
+                  setWishList={setWishList}
                 />
               }
             />
@@ -95,7 +98,7 @@ function App() {
               path="/cart"
               element={<CartWrapper selected={cart} setSelected={setCart} />}
             />
-            <Route path="/wishlist" element={<WishList />} />
+            <Route path="/wishlist" element={<WishListWrapper selected={wishList} setSelected={setWishList}/>} />
           </Routes>
         </div>
       </BrowserRouter>

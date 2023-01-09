@@ -146,17 +146,20 @@ button{
   justify-content: space-between;
 }
 
-.inside-details{
+.inside-details,.cart-details{
   width: 300px;
   margin-bottom: 50px;
+  
 }
 
 h2, h3{
+  text-align: left;
   color:#b1b0b0;
   font-size: 0.85em;
+  letter-spacing:0;
 }
 
-.inside-details h5{
+.inside-details,.cart-details h5{
   font-size: 1.2em;
 }
 
@@ -169,3 +172,11 @@ h2, h3{
 .cart-details{
   padding:20px;
 }
+p{
+  font-size:0.9em;
+}
+#heart{
+  color: black;  
+  font-size: 50px;
+}
+

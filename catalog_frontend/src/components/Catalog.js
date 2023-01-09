@@ -1,8 +1,5 @@
-import { useEffect, useState } from 'react'
+
 import ProductList from './ProductList'
-import useFetch from '../useFetch'
-import Cart from './Cart'
-import CartWrapper from './CartWrapper'
 
 const Catalog = ({
   checked,
@@ -16,14 +13,27 @@ const Catalog = ({
   setFilteredProducts,
   cart,
   setCart,
+  setWishList
 }) => {
   const addToCart = (product) => {
     setCart((currentArray) => {
       let arraycopy = [...currentArray]
       arraycopy.push(product)
       return arraycopy
+
+
     })
   }
+
+  const addToWishList = (product) => {
+    setWishList((currentArray) => {
+      let arraycopy = [...currentArray]
+      arraycopy.push(product)
+      return arraycopy
+
+
+    })
+  }  
 
   const handleSearch = (event) => {
     setSearch(event.target.value)
@@ -44,7 +54,7 @@ const Catalog = ({
       />
 
       {products && (
-        <ProductList products={filteredProducts} addToCart={addToCart} />
+        <ProductList products={filteredProducts} addToCart={addToCart} addToWishList={addToWishList}/>
       )}
     </div>
   )
